@@ -1,0 +1,48 @@
+.header {
+  &__menu-btn {
+    position: relative;
+    bottom: 0;
+  }
+
+  &__menu-input {
+    opacity: 0;
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  &__burger-slice,
+  &__burger-slice::before,
+  &__burger-slice::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #0f0e08;
+    transition: 0.6s;
+  }
+
+  &__burger-slice::before {
+    transform: translateY(-5px);
+  }
+
+  &__burger-slice::after {
+    transform: translateY(5px);
+  }
+
+  &__menu-input:checked ~ &__burger-slice {
+    width: 0;
+  }
+
+  &__menu-input:checked ~ &__burger-slice::before {
+    transform: rotate(45deg);
+  }
+
+  &__menu-input:checked ~ &__burger-slice::after {
+    transform: rotate(-45deg);
+  }
+}

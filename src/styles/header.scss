@@ -1,0 +1,138 @@
+.header {
+  $header: &;
+
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  &__image-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 60%;
+  }
+
+  &__image {
+    width: 100%;
+    height: inherit;
+  }
+
+  &__promo-content-decorator {
+    font-family: "Montserrat-Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    line-height: 1;
+  }
+
+  &__decorate-title {
+    display: none;
+  }
+
+  &__menu-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  &__logo-name {
+    font-size: 36px;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  &__promo-content {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+  }
+
+  &__promo {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: "Montserrat-Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    line-height: 1;
+  }
+
+  &__buy-ticket-btn {
+    display: flex;
+    margin-top: 80px;
+  }
+
+  &__ticket {
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "IBMPlexSans-Medium", sans-serif;
+    text-transform: uppercase;
+    background-color: #fff;
+    transition: 1s;
+    border: 1px solid #1a5a4c;
+
+    &:hover {
+      color: #fff;
+      background-color: #1a5a4c;
+    }
+  }
+
+  &__ticket-arrow {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #1a5a4c;
+    cursor: pointer;
+
+    &:hover #{$header}__ticket {
+      color: #fff;
+      background-color: #1a5a4c;
+    }
+
+    &::after {
+      content: url(../images/vector.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__decorate-arrow {
+    display: flex;
+    justify-items: center;
+  }
+
+  &__events {
+    cursor: pointer;
+    bottom: 50px;
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 18px;
+    padding-left: 8%;
+
+    &::before {
+      content: "";
+      width: 70px;
+      height: 2px;
+      background-color: #1a5a4c;
+      position: absolute;
+      right: 0;
+      bottom: 40%;
+      transform: translate(-70%, 0);
+    }
+  }
+}
