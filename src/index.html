@@ -8,51 +8,79 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__image-container">
-        <img
-          class="header__image"
-          src="/images/header-background.png"
-          alt="university"
-        >
-        <h2 class="header__promo-content-decorator">ній</h2>
-      </div>
-      <div class="header__menu-section">
-        <div class="header__menu-btn">
-          <input
-            class="header__menu-input"
-            type="checkbox"
-            id="menu"
+      <div class="container">
+        <div class="header__image-container">
+          <img
+            class="header__image"
+            src="/images/header-background.png"
+            alt="university"
           >
-          <label class="header__burger-slice" for="menu"></label>
+          <h2 class="header__promo-content-decorator">ній</h2>
         </div>
-        <nav class="header__nav">
-          <ul class="header__ul">
-            <li class="header__li-item"><a href="#" class="header__link">галерея</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">вистави та події</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">стати нашим другом</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">про нас</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">магазин</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">блог</a></li>
-            <li class="header__li-item"><a href="#" class="header__link">контакти</a></li>
-          </ul>
-        </nav>
-        <h1 class="header__logo-name">na<br>mu</h1>
-        <div></div>
-      </div>
-      <div class="header__promo-content">
-        <div class="header__promo">
-          <h2 class="header__title">
-            худож<span class="header__decorate-title">ній</span><br>музей
-          </h2>
-          <div class="header__buy-ticket-btn">
-            <button class="header__ticket">квитки</button>
-            <div class="header__ticket-arrow"></div>
+        <input
+          class="header__menu-input"
+          type="checkbox"
+          id="menu"
+        >
+        <div class="header__menu-section">
+          <label class="header__burger-toogler" for="menu">
+            <span class="header__burger-slice"></span>
+          </label>
+          <nav class="header__nav">
+            <h1 class="header__logo-name--menu">na<br>mu</h1>
+            <ul class="header__ul">
+              <li class="header__li-item">
+                <a href="#" class="header__link">галерея</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">вистави та події</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">стати нашим другом</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">про нас</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">магазин</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">блог</a>
+              </li>
+              <li class="header__li-item">
+                <a href="#" class="header__link">контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <h1 class="header__logo-name">na<br>mu</h1>
+        </div>
+        <div class="header__promo-content">
+          <div class="header__promo">
+            <h2 class="header__title">
+              худож<span class="header__decorate-title">ній</span><br>музей
+            </h2>
+            <div class="header__buy-ticket-btn">
+              <button class="header__ticket">квитки</button>
+              <div class="header__ticket-arrow"></div>
+            </div>
           </div>
         </div>
+        <div class="header__events">
+          <a href="#">події</a>
+        </div>
       </div>
-      <div class="header__events">події</div>
-
     </header>
+    <article class="promo__content-mobile">
+      <div class="header__promo header__promo--mobile">
+        <h2 class="header__title header__title--mobile">
+          худож<span class="header__decorate-title">ній</span><br>музей
+        </h2>
+        <div class="header__buy-ticket-btn header__buy-ticket-btn--mobile">
+          <button class="header__ticket header__ticket--mobile">квитки</button>
+          <div class="header__ticket-arrow header__ticket-arrow--mobile"></div>
+        </div>
+      </div>
+    </article>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

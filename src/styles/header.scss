@@ -1,17 +1,30 @@
 .header {
-  $header: &;
-
   height: 100vh;
   position: relative;
-  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 50vh;
+  }
 
   &__image-container {
     position: absolute;
     right: 0;
     top: 0;
     z-index: -1;
-    height: 100%;
+    height: 100vh;
     width: 60%;
+    @media screen and (max-width: 768px) {
+      height: 80vh;
+    }
+
+    @media screen and (max-width: 650px) {
+      height: 50vh;
+      width: 100vw;
+    }
   }
 
   &__image {
@@ -24,25 +37,37 @@
     text-transform: uppercase;
     font-size: 4.5em;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     line-height: 1;
+    @media screen and (max-width: 768px) {
+      font-size: 3.5em;
+    }
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__decorate-title {
     display: none;
+
+    @media screen and (max-width: 650px) {
+      display: inline;
+    }
   }
 
   &__menu-section {
+    padding: 0 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
+    justify-content: center;
   }
 
-  &__logo-name {
+  &__logo-name,
+  &__logo-name--menu {
+    font-family: "Montserrat-Bold", sans-serif;
     font-size: 36px;
     line-height: 1em;
     text-transform: uppercase;
@@ -50,15 +75,27 @@
 
   &__promo-content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 40%;
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__promo {
     position: absolute;
     right: 0;
-    display: flex;
-    flex-direction: column;
+
+    &--mobile {
+      position: relative;
+      justify-items: center;
+      flex-direction: column;
+      display: none;
+      @media screen and (max-width: 650px) {
+        display: flex;
+      }
+    }
   }
 
   &__title {
@@ -66,11 +103,25 @@
     text-transform: uppercase;
     font-size: 4.5em;
     line-height: 1;
+
+    &--mobile {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 2.8em;
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 650px) {
+      font-size: 3.5em;
+    }
   }
 
   &__buy-ticket-btn {
     display: flex;
     margin-top: 80px;
+
+    &--mobile {
+      margin: 20px auto;
+    }
   }
 
   &__ticket {
@@ -88,6 +139,10 @@
       color: #fff;
       background-color: #1a5a4c;
     }
+
+    &--mobile {
+      width: 70vw;
+    }
   }
 
   &__ticket-arrow {
@@ -96,11 +151,6 @@
     height: 70px;
     background-color: #1a5a4c;
     cursor: pointer;
-
-    &:hover #{$header}__ticket {
-      color: #fff;
-      background-color: #1a5a4c;
-    }
 
     &::after {
       content: url(../images/vector.svg);
@@ -124,14 +174,23 @@
     font-size: 18px;
     padding-left: 8%;
 
+    // @media screen and (max-width:768px) {
+    //    &__{
+    //      display: none;
+    //    }
+    // }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
     &::before {
       content: "";
       width: 70px;
       height: 2px;
       background-color: #1a5a4c;
       position: absolute;
-      right: 0;
-      bottom: 40%;
+      left: 90px;
+      bottom: 10px;
       transform: translate(-70%, 0);
     }
   }
