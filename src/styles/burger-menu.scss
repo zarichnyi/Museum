@@ -7,11 +7,13 @@
     display: flex;
     align-items: center;
     align-self: center;
-    position: absolute;
-    left: 55px;
     cursor: pointer;
     width: 25px;
     height: 25px;
+    @media screen and (max-width: 768px) {
+      padding-top: 30px;
+      align-self: flex-start;
+    }
   }
 
   &__burger-slice,
@@ -50,6 +52,12 @@
     position: relative;
     opacity: 1;
     left: 50px;
+
+    @media screen and (max-width: 768px) {
+      height: 100vh;
+      padding-top: 25px;
+      display: block;
+    }
   }
 
   &__menu-input:checked ~ &__menu-section &__logo-name {
@@ -58,5 +66,17 @@
 
   &__menu-input:checked ~ &__menu-section {
     background-color: #fff;
+  }
+
+  &__menu-input:checked ~ &__promo-content {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu-input:checked ~ &__image-container {
+    @media screen and (max-width: 768px) {
+      visibility: hidden;
+    }
   }
 }

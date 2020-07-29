@@ -1,6 +1,9 @@
 .header {
   height: 100vh;
   position: relative;
+  max-width: 1920px;
+  max-height: 910px;
+  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
     height: 80vh;
@@ -16,6 +19,7 @@
     top: 0;
     z-index: -1;
     height: 100vh;
+    max-height: 910px;
     width: 60%;
     @media screen and (max-width: 768px) {
       height: 80vh;
@@ -29,6 +33,7 @@
 
   &__image {
     width: 100%;
+    max-height: 910px;
     height: inherit;
   }
 
@@ -60,9 +65,8 @@
   }
 
   &__menu-section {
-    padding: 0 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__logo-name,
@@ -86,8 +90,10 @@
   &__promo {
     position: absolute;
     right: 0;
+    margin-right: 50px;
 
     &--mobile {
+      margin-right: 0;
       position: relative;
       justify-items: center;
       flex-direction: column;
@@ -168,18 +174,12 @@
 
   &__events {
     cursor: pointer;
-    bottom: 50px;
+    bottom: 90px;
     transform: rotate(-90deg);
     position: absolute;
     font-size: 18px;
-    padding-left: 8%;
 
-    // @media screen and (max-width:768px) {
-    //    &__{
-    //      display: none;
-    //    }
-    // }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1050px) {
       display: none;
     }
 
@@ -189,7 +189,7 @@
       height: 2px;
       background-color: #1a5a4c;
       position: absolute;
-      left: 90px;
+      left: -30px;
       bottom: 10px;
       transform: translate(-70%, 0);
     }
