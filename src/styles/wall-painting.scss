@@ -1,13 +1,68 @@
 .wall-painting {
   margin: 0 auto;
+  display: grid;
+  @media screen and (max-width: 1300px) {
+    padding: 0 69px;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 0 15px;
+  }
 
   &__image {
     width: 100%;
     max-height: 674px;
+    min-height: 210px;
     object-fit: cover;
     @media screen and (max-width: 1300px) {
-      max-height: 500px;
-      padding: 0 69px;
+      height: 500px;
+    }
+    @media screen and (max-width: 900px) {
+      height: 400px;
+    }
+    @media screen and (max-width: 500px) {
+      height: 210px;
+    }
+  }
+
+  &__lecture-advert-container {
+    margin: 0 auto;
+  }
+
+  &__lecture-advert-content {
+    position: relative;
+    top: -50%;
+    background-color: #fff;
+    box-shadow: 0 2px 0 rgba(26, 90, 76, 0.25);
+    padding: 25px 100px;
+    margin: 0 10px;
+    @media screen and (max-width: 700px) {
+      padding: 18px 20px;
+    }
+  }
+
+  &__event-date-info {
+    margin-bottom: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #687480;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "IBMPlexSans-Medium", sans-serif;
+
+    &--opening {
+      color: #1a5a4c;
+      font-family: "IBMPlexSans-Bold", sans-serif;
+    }
+  }
+
+  &__title-event {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    max-width: 370px;
+    @media screen and (max-width: 426px) {
+      text-align: center;
+      font-size: 28px;
     }
   }
 }

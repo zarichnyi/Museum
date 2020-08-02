@@ -22,7 +22,7 @@
 
   &__first-part {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     column-gap: 130px;
     @media screen and (max-width: 1300px) {
       grid-template-columns: 1fr;
@@ -81,7 +81,7 @@
       font-family: "IBMPlexSans-Bold", sans-serif;
     }
   }
-  
+
   &__name {
     width: 420px;
     position: relative;

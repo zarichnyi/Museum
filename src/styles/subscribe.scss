@@ -1,0 +1,112 @@
+.subscribe {
+  margin: 0 auto;
+  display: grid;
+  @media screen and (max-width: 1300px) {
+    padding: 0 69px;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 0 15px;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 674px;
+    min-height: 210px;
+    object-fit: cover;
+    @media screen and (max-width: 1300px) {
+      height: 500px;
+    }
+    @media screen and (max-width: 900px) {
+      height: 450px;
+    }
+    @media screen and (max-width: 500px) {
+      height: 386px;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: -200%;
+    width: 570px;
+
+    @media screen and (max-width: 750px) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 500px) {
+      top: -160%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 48px;
+    font-family: "Montserrat-bold", sans-serif;
+
+    @media screen and (max-width: 750px) {
+      font-size: 36px;
+    }
+  }
+
+  &__slogan {
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-family: "IBMPlexSans-Regular", sans-serif;
+  }
+
+  &__input-container {
+    display: flex;
+    column-gap: 30px;
+    @media screen and (max-width: 750px) {
+      padding: 0 10px;
+      column-gap: 10px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 25px 35px;
+    font-size: 16px;
+
+    @media screen and (max-width: 750px) {
+      padding: 0 10px;
+      font-size: 14px;
+    }
+
+    &::placeholder {
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background: #1a5a4c;
+    position: relative;
+    transition: 0.3s;
+
+    @media screen and (max-width: 750px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::before {
+      content: url(../images/vector.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      background: #f14a27;
+    }
+  }
+}
