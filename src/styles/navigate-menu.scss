@@ -1,0 +1,50 @@
+.header {
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    transition: 0.3s;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    left: -300px;
+    width: 100%;
+    @media screen and (max-width: 905px) {
+      column-gap: 10px;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    @media screen and (max-width: 1145px) {
+      column-gap: 30px;
+    }
+
+    @media screen and (max-width: 1025px) {
+      column-gap: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-top: 50px;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__link {
+    color: #0f0e08;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

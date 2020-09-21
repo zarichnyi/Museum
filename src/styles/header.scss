@@ -1,0 +1,208 @@
+.header {
+  $header: &;
+
+  height: 100vh;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 50vh;
+  }
+
+  &__image-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 60%;
+    @media screen and (max-width: 768px) {
+      height: 80vh;
+    }
+
+    @media screen and (max-width: 650px) {
+      height: 50vh;
+      width: 100vw;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: inherit;
+  }
+
+  &__promo-content-decorator {
+    font-family: "Montserrat-Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    line-height: 1;
+    @media screen and (max-width: 768px) {
+      font-size: 3.5em;
+    }
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &__decorate-title {
+    display: none;
+
+    @media screen and (max-width: 650px) {
+      display: inline;
+    }
+  }
+
+  &__menu-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-name,
+  &__logo-name--menu {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 36px;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  &__promo-content {
+    position: absolute;
+    top: 40%;
+    width: 40%;
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &__promo {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+
+    &--mobile {
+      margin-right: 0;
+      position: relative;
+      justify-items: center;
+      flex-direction: column;
+      display: none;
+      @media screen and (max-width: 650px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Montserrat-Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    line-height: 1;
+
+    &--mobile {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 2.8em;
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 650px) {
+      font-size: 3.5em;
+    }
+  }
+
+  &__buy-ticket-btn {
+    display: flex;
+    margin-top: 80px;
+
+    &--mobile {
+      margin: 20px auto;
+    }
+  }
+
+  &__ticket {
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "IBMPlexSans-Medium", sans-serif;
+    text-transform: uppercase;
+    background-color: #fff;
+    transition: 1s;
+    border: 1px solid #1a5a4c;
+
+    &:hover ~ #{$header}__ticket-arrow {
+      background-color: #fff;
+      border: 1px solid #1a5a4c;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #1a5a4c;
+    }
+
+    &--mobile {
+      width: 70vw;
+    }
+  }
+
+  &__ticket-arrow {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #1a5a4c;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: url(../images/vector.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__decorate-arrow {
+    display: flex;
+    justify-items: center;
+  }
+
+  &__events {
+    cursor: pointer;
+    bottom: 90px;
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 18px;
+
+    & > a {
+      color: #687480;
+    }
+
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      width: 70px;
+      height: 2px;
+      background-color: #1a5a4c;
+      position: absolute;
+      left: -30px;
+      bottom: 10px;
+      transform: translate(-70%, 0);
+    }
+  }
+}

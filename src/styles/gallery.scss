@@ -1,0 +1,102 @@
+.gallery {
+  display: grid;
+  padding: 0 170px;
+  @media screen and (max-width: 1350px) {
+    padding: 0 100px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
+
+  &__image-container {
+    display: grid;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    @media screen and (max-width: 1300px) {
+      justify-self: center;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &__image {
+    gap: 30px;
+    @media screen and (max-width: 900px) {
+      height: 410px;
+      width: 280px;
+    }
+    @media screen and (max-width: 1600px) {
+      &--third {
+        display: none;
+      }
+      &--sixth {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1350px) {
+      &--second,
+      &--fourth,
+      &--fifth,
+      &--sixth {
+        display: none;
+      }
+      &--third {
+        display: grid;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      &--third {
+        display: none;
+      }
+    }
+  }
+
+  &__container-part {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    gap: 30px;
+
+    @media screen and (max-width: 1600px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1300px;
+    }
+
+    @media screen and (max-width: 750px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__toogler {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background: #1a5a4c;
+    position: relative;
+    transition: 0.3s;
+
+    @media screen and (max-width: 1350px) {
+      display: none;
+    }
+
+    &::before {
+      content: url(../images/vector.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      background: #f14a27;
+    }
+  }
+}

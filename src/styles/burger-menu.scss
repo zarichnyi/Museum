@@ -1,0 +1,82 @@
+.header {
+  &__menu-input {
+    display: none;
+  }
+
+  &__burger-toogler {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    @media screen and (max-width: 768px) {
+      padding-top: 30px;
+      align-self: flex-start;
+    }
+  }
+
+  &__burger-slice,
+  &__burger-slice::before,
+  &__burger-slice::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #0f0e08;
+    transition: 0.6s;
+  }
+
+  &__burger-slice::before {
+    transform: translateY(8px);
+  }
+
+  &__burger-slice::after {
+    transform: translateY(-8px);
+  }
+
+  &__menu-input:checked ~ &__menu-section &__burger-slice::before {
+    width: 0;
+  }
+
+  &__menu-input:checked ~ &__menu-section &__burger-slice {
+    transform: rotate(45deg);
+  }
+
+  &__menu-input:checked ~ &__menu-section &__burger-slice::after {
+    transform: rotate(-90deg);
+  }
+
+  &__menu-input:checked ~ &__menu-section &__nav {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    left: 50px;
+
+    @media screen and (max-width: 768px) {
+      height: 100vh;
+      padding-top: 25px;
+      display: block;
+    }
+  }
+
+  &__menu-input:checked ~ &__menu-section &__logo-name {
+    visibility: hidden;
+  }
+
+  &__menu-input:checked ~ &__menu-section {
+    background-color: #fff;
+  }
+
+  &__menu-input:checked ~ &__promo-content {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu-input:checked ~ &__image-container {
+    @media screen and (max-width: 768px) {
+      visibility: hidden;
+    }
+  }
+}
