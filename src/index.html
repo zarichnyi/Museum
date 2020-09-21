@@ -200,18 +200,21 @@
           <p class="subscribe__slogan">
             Бути в курсі всіх актуальних подій та останніх новин.
           </p>
-          <div class="subscribe__input-container">
-            <input
-              type="email"
-              placeholder="E-mail"
-              name=""
-              id="email"
-              class="subscribe__input"
-            >
-            <label class="subscribe__button-label" for="email">
-              <div class="subscribe__button"></div>
-            </label>
-          </div>
+
+            <form action="" method="GET" class="subscribe__input-container">
+              <input
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                id="email"
+                class="subscribe__input"
+                required
+              >
+              <label class="subscribe__button-label" for="email">
+                <button class="subscribe__button" type="submit" ></button>
+              </label>
+            </form>
+
         </div>
       </article>
     </main>
